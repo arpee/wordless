@@ -1,0 +1,36 @@
+body{
+    background-color: #336699;
+
+}
+  .grid-container {
+    width:415px;
+    height: 500px;
+    margin: 100px auto;  
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.grid-container div {
+    border-radius: 10px;
+    border: 5px solid rgb(0, 0, 0);
+    padding: 20px;
+}  
+.Title {
+    margin-top:30px;
+    text-align: center;
+    font-size: 50px;
+    color:rgb(72, 216, 15);
+}
+
+.green {
+    background-color: #339966;
+}
+
+.yellow {
+    background-color: #cccc33;
+}
+  
+.black {
+    background-color: #555555;
+}  
