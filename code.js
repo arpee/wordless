@@ -8,6 +8,7 @@ var targetWords;
 var el;
 wordSel();
 var colors = [];
+var keyboard = Array.from(document.querySelectorAll(".kkey"));
 document.addEventListener('keyup', logkey);
 
 function attachEvents() {
@@ -28,7 +29,7 @@ function logkey(e) {
     console.log(e.keyCode);
     console.log(e.keyCode + 3);
 
-    if (e.keyCode == 8) {
+    if (e.keyCode == 8 && game.lc > 0) {
         backspace();
     }
     if (e.keyCode == 13 && game.lc == 5) {
@@ -86,7 +87,8 @@ function colorWord() {
     for (i = 0; i <= 4; i++) {
         letterDiv = document.querySelector(".r" + game.rc + ".c" + i);
         if (tword[i] == gword[i]) {
-            letterDiv.classList.add('green');
+            letterDiv.classList.add("green");
+            colorKey(gword[i], "green");
             gword[i] = "-";
             tword[i] = "_";
         }
@@ -95,7 +97,12 @@ function colorWord() {
         letterDiv = document.querySelector(".r" + game.rc + ".c" + j);
         if (tword.includes(gword[j])) {
             letterDiv.classList.add('yellow');
-            tword[i] = "_";
+            colorKey(gword[j], "yellow");
+            tword.splice(tword.indexOf(gword[j]), 1, "_");
+            gword[j] = "-";
+        } else if (!letterDiv.classList.contains('green')) {
+            letterDiv.classList.add('black');
+            colorKey(gword[j], "black");
         }
     }
     if (game.guess.toString() == game.target.toString()) {
@@ -106,16 +113,25 @@ function colorWord() {
     nice = "";
     g = [];
     game.guess = [];
-    if (game.rc == 6){
+    if (game.rc == 6) {
         loses();
     }
 }
 
+function colorKey(letter, color) {
+    document.querySelectorAll(".kkey").forEach(kkey => {
+        if (kkey.id.substring(0, 1).toUpperCase() == letter) {
+            kkey.classList.add(color);
+        }
+    });
+}
+
 function win() {
     alert("Good work! You WIN!");
-    
+
 }
 
 function loses() {
-    alert("You lossed :( Try again if you want to win");
+    game.target.join("")
+    alert("You lose. The word was " + game.target.join(""));
 }
