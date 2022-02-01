@@ -11,6 +11,9 @@
 
 <body>
     <div class="Title">Wordless</div>
+    <div id="win">wins: 0</div>
+    <div id="loses">loses: 0</div>
+    <div id="streak">streak: 0</div>
     <div class="grid-container">
         <div id="grid-item30" class="grid-item r0 c0"></div>
         <div id="grid-item26" class="grid-item r0 c1"></div>
@@ -44,7 +47,7 @@
         <div id="grid-item24" class="grid-item r5 c4"></div>
     
       </div>
-      <button onclick="newGame" id="newGameButton">New Game</button>
+      <button onclick="newGame()" id="newGameButton">New Game</button>
       <div id="keyboard" class="keyboard">
           <div class="row-1">
             <div class="kkey" id="q-81">Q</div>

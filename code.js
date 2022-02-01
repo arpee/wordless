@@ -3,7 +3,9 @@ game.target = [];
 game.guess = [];
 game.rc = 0;
 game.lc = 0;
-game.green = [];
+game.streak = 0;
+game.wins = 0;
+game.loses = 0;
 var targetWords;
 var el;
 wordSel();
@@ -126,12 +128,19 @@ function colorKey(letter, color) {
     });
 }
 
+function newGame() {
+    location.reload();
+}
+
 function win() {
     alert("Good work! You WIN!");
-
+    game.wins++;
+    game.streak++;
 }
 
 function loses() {
     game.target.join("")
     alert("You lose. The word was " + game.target.join(""));
+    game.loses++;
+    game.streak = 0;
 }

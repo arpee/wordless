@@ -32,7 +32,32 @@ body{
     color:rgb(72, 216, 15);
 }
 
+#win {
+    font-size: 30px;
+    border: 5px solid rgb(0, 0, 0);
+    border-width: 3px;
+    border-color: gray;
+    border-radius: 10px;
+    width: auto;
+}
 
+#loses {
+font-size: 30px;
+border: 5px solid rgb(0, 0, 0);
+border-width: 3px;
+border-color: gray;
+border-radius: 10px;
+width: auto;
+}
+
+#streak{
+    font-size: 30px;
+    border: 5px solid rgb(0, 0, 0);
+    border-width: 3px;
+    border-color: gray;
+    border-radius: 10px;
+    width: auto;
+}
 
 #keyboard {
     width: 400px;
