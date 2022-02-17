@@ -1,97 +1,25 @@
 <!DOCTYPE html>
 <html>
-    
-<head>
-    <title>Wordless</title>
-    <meta charset="utf-8">
 
-    <link rel="stylesheet" href="style.css">
+<head>
+  <title>Wordless</title>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-    <div class="Title">Wordless</div>
-    <div id="win">wins: 0</div>
-    <div id="loses">loses: 0</div>
-    <div id="streak">streak: 0</div>
-    <div class="grid-container">
-        <div id="grid-item30" class="grid-item r0 c0"></div>
-        <div id="grid-item26" class="grid-item r0 c1"></div>
-        <div id="grid-item27" class="grid-item r0 c2"></div>
-        <div id="grid-item28" class="grid-item r0 c3"></div>
-        <div id="grid-item29" class="grid-item r0 c4"></div>
-        <div id="grid-item5" class="grid-item r1 c0"></div>
-        <div id="grid-item1" class="grid-item r1 c1"></div>
-        <div id="grid-item2" class="grid-item r1 c2"></div>
-        <div id="grid-item3" class="grid-item r1 c3"></div>
-        <div id="grid-item4" class="grid-item r1 c4"></div>
-        <div id="grid-item10" class="grid-item r2 c0"></div>
-        <div id="grid-item6" class="grid-item r2 c1"></div>
-        <div id="grid-item7" class="grid-item r2 c2"></div>
-        <div id="grid-item8" class="grid-item r2 c3"></div>
-        <div id="grid-item9" class="grid-item r2 c4"></div>
-        <div id="grid-item15" class="grid-item r3 c0"></div>
-        <div id="grid-item11" class="grid-item r3 c1"></div>
-        <div id="grid-item12" class="grid-item r3 c2"></div>
-        <div id="grid-item13" class="grid-item r3 c3"></div>
-        <div id="grid-item14" class="grid-item r3 c4"></div>
-        <div id="grid-item20" class="grid-item r4 c0"></div>
-        <div id="grid-item16" class="grid-item r4 c1"></div>
-        <div id="grid-item17" class="grid-item r4 c2"></div>
-        <div id="grid-item18" class="grid-item r4 c3"></div>
-        <div id="grid-item19" class="grid-item r4 c4"></div>
-        <div id="grid-item25" class="grid-item r5 c0"></div>
-        <div id="grid-item21" class="grid-item r5 c1"></div>
-        <div id="grid-item22" class="grid-item r5 c2"></div>
-        <div id="grid-item23" class="grid-item r5 c3"></div>
-        <div id="grid-item24" class="grid-item r5 c4"></div>
-    
-      </div>
-      <button onclick="newGame()" id="newGameButton">New Game</button>
-      <div id="keyboard" class="keyboard">
-          <div class="row-1">
-            <div class="kkey" id="q-81">Q</div>
-            <div class="kkey" id="w-87">W</div>
-            <div class="kkey" id="e-69">E</div>
-            <div class="kkey" id="r-82">R</div>
-            <div class="kkey" id="t-84">T</div>
-            <div class="kkey" id="y-89">Y</div>
-            <div class="kkey" id="u-85">U</div>
-            <div class="kkey" id="i-73">I</div>
-            <div class="kkey" id="o-79">O</div>
-            <div class="kkey" id="p-80">P</div>    
-          </div>
-          <div class="row-2">
-            <div class="kkey" id="a-65">A</div>
-            <div class="kkey" id="s-83">S</div>
-            <div class="kkey" id="d-68">D</div>
-            <div class="kkey" id="f-70">F</div>
-            <div class="kkey" id="g-71">G</div>
-            <div class="kkey" id="h-72">H</div>
-            <div class="kkey" id="j-74">J</div>
-            <div class="kkey" id="k-75">K</div>
-            <div class="kkey" id="l-76">L</div>    
-          </div>
-          <div class="row-3">
-            <div class="kkey" id="z-90">Z</div>
-            <div class="kkey" id="x-88">X</div>
-            <div class="kkey" id="c-67">C</div>
-            <div class="kkey" id="v-86">V</div>
-            <div class="kkey" id="b-66">B</div>
-            <div class="kkey" id="n-78">N</div>
-            <div class="kkey" id="m-77">M</div>    
-            <div class="kkey" id="back-8">⌫</div>    
-            <div class="kkey" id="enter-13">ENTER</div>    
-          </div>
-     
-      </div>
-      
+  <div class="Title">Wordless</div>
+  <div class="board grid-container"></div>
+  <div id="keyboard" class="keyboard"></div>
 
 
 
-    <script type="text/javascript" src="targets.js"></script>
-    <script type="text/javascript" src="sowpods5.js"></script>
-    <script type="text/javascript" src="code.js"></script>
+
+  <script type="text/javascript" src="targets.js"></script>
+  <script type="text/javascript" src="sowpods.js"></script>
+  <script type="text/javascript" src="code.js"></script>
 
 </body>
 

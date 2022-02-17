@@ -1,4 +1,5 @@
-var wordlist = ["aa",
+var wordlist = [
+"aa",
 "aah",
 "aahed",
 "aahing",

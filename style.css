@@ -2,14 +2,18 @@ body{
     background-color: #336699;
 
 }
+
+.Title, .kkey {
+    cursor: pointer;
+}
+
   .grid-container {
-    width:415px;
+    width: fit-content;
     height: 500px;
     margin: 50px auto;  
     display: grid;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .grid-container div {
     border-radius: 10px;
@@ -23,6 +27,7 @@ body{
     justify-content: center;
     flex-flow: column;
     height: 63px;
+    width: 63px;
     font-size: 30px;
 }
 .Title {
